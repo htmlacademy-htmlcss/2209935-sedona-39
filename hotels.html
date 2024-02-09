@@ -15,29 +15,27 @@
                 </a>
                 <ul class="navigation-main">
                     <li class="navigation-main-item">
-                        <a href="index.html" class="navigation-main-link">Главная</a>
+                        <a href="index.html" class="navigation-main-link"
+                            aria-current="page">Главная</a>
                     </li>
                     <li class="navigation-main-item">
                         <a href="#" class="navigation-main-link">О Седоне</a>
                     </li>
                     <li class="navigation-main-item">
-                        <a href="hotels.html" class="navigation-main-link navigation-main-link-current"
-                            aria-current="page">Гостиницы</a>
+                        <a href="hotels.html" class="navigation-main-link navigation-main-link-current">Гостиницы</a>
                     </li>
                 </ul>
                 <ul class="navigation-user">
                     <li class="navigation-user-item">
-                        <a href="#" class="navigation-user-link">
+                        <button class="button-search" type="button">
                             <span class="visually-hidden">Поиск по сайту</span>
-                        </a>
+                        </button>
                     </li>
                     <li class="navigation-user-item">
-                        <a href="#" class="navigation-user-link">
-                            <span class="visually-hiden">В избранное добавлено 12 отелей</span></a>
-                        <span class="likes">12</span>
+                        <button class="button-favorite" type="button">Избранное</button>
                     </li>
                     <li class="navigation-user-item">
-                        <button class="button" type="button">Хочу сюда</button>
+                        <a class="want-there" href="#">Хочу сюда</a>
                     </li>
                 </ul>
             </nav>
@@ -65,7 +63,7 @@
                             <input id="hotels-pool" class="control-input" type="checkbox" name="hotels-pool" checked>
                             Бассейн
                         </label>
-                        <label for="hotels=parking">
+                        <label for="hotels-parking">
                             <input id="hotels-parking" class="control-input" type="checkbox" name="hotels-parking"
                                 checked>
                             Парковка
@@ -136,12 +134,12 @@
                             <h3>Amara Resort & Spa</h3>
                         </a>
                         <a href="#" tabindex="-1">
-                            <img src="images/hotels/AmaraResort&Spa.jpg" width="300" height="212"
+                            <img src="images/hotels/amara-resort-spa.jpg" width="300" height="212"
                                 alt="Гостиница Amara Resort & Spa">
                         </a>
                         <span>Гостиница</span>
                         <b class="hotel-costs">От 4000 ₽</b>
-                        <button class="button button-more" type="button">подробнее</button>
+                        <a href="#">Подробнее</a>
                         <button class="button button-to-favorites" type="button">в избранное</button>
                         <div class="stars four-stars">
                             <span class="visually-hidden">4 звезды</span>
@@ -153,12 +151,12 @@
                             <h3>Villas at Poco Diablo</h3>
                         </a>
                         <a href="#" tabindex="-1">
-                            <img src="images/hotels/VillasatPocoDiablo.jpg" width="300" height="212"
+                            <img src="images/hotels/villasat-poco-diablo.jpg" width="300" height="212"
                                 alt="Гостиница Villas at Poco Diablo">
                         </a>
                         <span>Гостиница</span>
                         <b class="hotel-costs">От 5000 ₽</b>
-                        <button class="button button-more" type="button">подробнее</button>
+                        <a href="#">Подробнее</a>
                         <button class="button button-in-favorites" type="button">в избранное</button>
                         <div class="stars four-stars">
                             <span class="visually-hidden">4 звезды</span>
@@ -170,12 +168,12 @@
                             <h3>Desert Quail Inn</h3>
                         </a>
                         <a href="#" tabindex="-1">
-                            <img src="images/hotels/DesertQuailInn.jpg" width="300" height="212"
+                            <img src="images/hotels/desert-quail-inn.jpg" width="300" height="212"
                                 alt="Гостиница Villas at Poco Diablo">
                         </a>
                         <span>Гостиница</span>
                         <b class="hotel-costs">От 2500 ₽</b>
-                        <button class="button button-more" type="button">подробнее</button>
+                        <a href="#">Подробнее</a>
                         <button class="button button-to-favorites" type="button">в избранное</button>
                         <div class="stars three-stars">
                             <span class="visually-hidden">3 звезды</span>
@@ -187,12 +185,12 @@
                             <h3 aria-label="Гостиница GreenTree Inn">GreenTree Inn</h3>
                         </a>
                         <a href="#" tabindex="-1">
-                            <img src="images/hotels/GreenTreeInn.jpg" width="300" height="212"
+                            <img src="images/hotels/green-tree-inn.jpg" width="300" height="212"
                                 alt="Гостиница GreenTree Inn">
                         </a>
                         <span>Гостиница</span>
                         <b class="hotel-costs">От 1500 ₽</b>
-                        <button class="button button-more" type="button">подробнее</button>
+                        <a href="#">Подробнее</a>
                         <button class="button button-to-favorites" type="button">в избранное</button>
                         <div class="stars two-stars">
                             <span class="visually-hidden">2 звезды</span>
@@ -253,7 +251,7 @@
             </section>
             <a href="tel:+78128121212" class="phone" aria-label="Номер телефона для связи">+7 (812) 812-12-12</a>
             <a href="https://htmlacademy.ru/" class="academy-link">
-                <img class="academy-logo" src="images/HTML Academy.svg" width="115" height="33"
+                <img class="academy-logo" src="images/html-academy.svg" width="115" height="33"
                     alt="Логотип Html academy">
             </a>
         </footer>
