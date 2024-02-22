@@ -18,7 +18,16 @@
 }
 
 /* Общие стили сайта */
+
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -28,8 +37,31 @@ body {
 }
 
 /* Главная страница */
-.page-header{
+
+.page-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
   background-color: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-main {
+  margin: 0;
+  padding: 0;
+  width: 460px;
+}
+
+.navigation-user {
+  max-width: 250px;
+  margin-left: auto;
 }
 
 .navigation-main-link {
@@ -55,10 +87,23 @@ body {
   border-radius: 4px;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .hero {
-  height: 542px;
-  background: url("../images/backgrounds/welcome-background-divider.png") no-repeat 0 100%/100% auto,
-              url("../images/backgrounds/welcome-background.jpg") no-repeat 0 0/100% auto;
+  /* height: 542px; */
+  background-image: url("../images/backgrounds/welcome-background-divider.png"),
+                    url("../images/backgrounds/welcome-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 100%, 0 0;
+  background-size: 100% auto;
+  background-color: #9b9797;
+}
+
+.hero-image-main {
+  display: block;
+  margin: 0 auto;
 }
 
 .gallery,
@@ -67,6 +112,13 @@ body {
 .subscribe-index,
 .subscribe-hotels {
   text-align: center;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .gallery-item h3 {
@@ -91,6 +143,15 @@ body {
 }
 .gallery-item:nth-child(3) {
   background-color: rgba(131, 179, 211, 0.2);
+}
+
+.gallery-item:first-child,
+.gallery-item:last-child {
+  width: 1200px;
+}
+
+.gallery-item:not(.gallery-item:first-child, .gallery-item:last-child) {
+  width: 400px;
 }
 
 .gallery-item img {
@@ -126,9 +187,14 @@ body {
   color: #ffffff;
 }
 
-.advantages-subscription {
-  font-size: 22px;
-  line-height: 26px;
+.advantages-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-item {
+  width: 400px;
 }
 
 .advantages-item h3 {
@@ -158,7 +224,7 @@ body {
 }
 
 .subscribe-index {
-  height: 414.86px;
+  height: 414px;
   background-image: url("../images/backgrounds/subscribe-background.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -181,14 +247,14 @@ body {
   color: #ffffff;
 }
 
-.subscribe-index-table input,
-.subscribe-hotels-table input {
+.subscribe-table input {
+  font-family: inherit;
   line-height: 24px;
 }
 
 .button {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-weight: 700;
+  font-family: inherit;
+  font-weight: inherit;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -219,7 +285,27 @@ body {
   background-color: #7db54f;
 }
 
+.footer-wrapper {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.social-list {
+  width: 142px;
+  margin-right: 236px;
+}
+
 .phone {
+  width: 331px;
+}
+
+.academy-logo {
+  width: 115px;
+  margin-left: auto;
+}
+
+.phone-link {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
@@ -230,7 +316,12 @@ body {
 
 /* Страница с отелями */
 
-.wrapper {
+.main-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-background {
   color: #ffffff;
   background-color: #5e5050;
   background-image: url("../images/backgrounds/hotels-background.jpg");
@@ -238,9 +329,23 @@ body {
   background-size: 100% 100%;
 }
 
+.header-container-center {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .inner-header h1 {
   font-size: 60px;
   line-height: 78px;
+}
+
+.hotels {
+  background-color: #ffffff;
+}
+
+.hotels-container-center {
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .breadcrumbs-link {
@@ -274,6 +379,24 @@ body {
   color: #333333;
 }
 
+.view-buttons {
+  margin: 0;
+  padding: 0;
+}
+
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.hotels-item {
+  width: 340px;
+  border: 1px solid #e6e6e6;
+}
+
 .hotels-item img {
   display: block;
 }
@@ -301,8 +424,14 @@ body {
   padding: 9px 22px 8px 23px;
 }
 
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .pagination-item {
-  margin-bottom: 20px;
+  margin-right: 8px;
 }
 
 .pagination-link {
