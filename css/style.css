@@ -57,17 +57,20 @@ body {
 }
 
 .page-header {
+  display: flex;
   background-color: #ffffff;
-  height: 100%;
+  height: 64px;
+  padding: 0 70px;
 }
 
 .navigation {
   display: flex;
+  justify-content: space-between;
   height: 63px;
+  width: 100%;
 }
 
 .header-logo-link {
-  padding-left: 70px;
   margin-right: 28px;
   z-index: 1;
 }
@@ -87,7 +90,6 @@ body {
 }
 
 .navigation-user {
-  padding-right: 70px;
   justify-content: flex-end;
   width: 268px;
   margin-left: auto;
