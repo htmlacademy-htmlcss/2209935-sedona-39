@@ -56,12 +56,14 @@
           <p class="gallery-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
           <p class="gallery-subscription">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           <ul class="gallery-list">
-            <li class="gallery-item gallery-item-picture">
+            <li class="gallery-item-picture">
               <div class="gallery-item-wrap">
                 <h3>Настоящий городок</h3>
                 <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img src="images/gallery-1.jpg" width="800" height="385" alt="Седона - настоящий город">
+              <div class="gallery-item-picture-image">
+                <img src="images/gallery-1.jpg" width="800" height="385" alt="Седона - настоящий город">
+              </div>
             </li>
             <li class="gallery-item gallery-item-light">
               <h3>Небольшая площадь</h3>
@@ -75,8 +77,10 @@
               <h3>Мало туристов</h3>
               <p>Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="gallery-item gallery-item-picture">
-              <img src="images/gallery-2.jpg" width="800" height="385" alt="Седона: мост дьявола">
+            <li class="gallery-item-picture">
+              <div class="gallery-item-picture-image">
+                <img src="images/gallery-2.jpg" width="800" height="385" alt="Седона: мост дьявола">
+              </div>
               <div class="gallery-item-wrap">
                 <h3>Там есть мост дьявола</h3>
                 <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -85,18 +89,18 @@
           </ul>
         </section>
         <section class="advantages">
-          <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+          <h2>Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</h2>
           <p class="advantages-subscription">Опытный персонал и качественное обслуживание!</p>
           <ul class="advantages-list">
-            <li class="advantages-item advantages-item-dark">
+            <li class="advantages-item advantages-item-dark advantages-item-housing">
               <h3>Жильё</h3>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li class="advantages-item">
+            <li class="advantages-item advantages-item-food">
               <h3>Еда</h3>
               <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="advantages-item advantages-item-dark">
+            <li class="advantages-item advantages-item-dark advantages-item-souvenir">
               <h3>Сувениры</h3>
               <p>Не только китайского, но и настоящего местного производства!</p>
             </li>
@@ -105,7 +109,7 @@
         <section class="appointment">
           <h2 class="visually-hidden">Поиск гостиницы</h2>
           <p class="appointment-title">Заинтересовались?</p>
-          <p class="appointment-subscription">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
+          <p class="appointment-subscription">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
           <a href="hotels.html">Поиск гостиницы в Седоне</a>
         </section>
@@ -114,7 +118,7 @@
           <p class="subscribe-index-subscription">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru/" class="subscribe-table" method="post">
             <label class="visually-hidden" for="e-mail">Укажите ваш e-mail</label>
-            <input id="e-mail" type="email" name="email" placeholder="Ваш e-mail">
+            <input class="input-subscribe" id="e-mail" type="email" name="email" placeholder="Ваш e-mail">
             <button class="button button-blue button-subscribe" type="submit">Подписаться</button>
           </form>
         </section>

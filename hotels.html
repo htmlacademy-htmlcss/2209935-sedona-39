@@ -91,14 +91,10 @@
               <fieldset class="filter-group filter-group-costs">
                 <legend class="control">Стоимость, ₽:</legend>
                 <div class="cost-wrap">
-                  <label class="costs-label" for="input-from">
-                    От
-                    <input id="input-from" class="input-costs" type="number" name="costs-from" value="0">
-                  </label>
-                  <label class="costs-label" for="input-to">
-                    До
-                    <input id="input-to" class="input-costs" type="number" name="costs-to" value="9000">
-                  </label>
+                  <label class="costs-label costs-label-from" for="input-from">От</label>
+                  <input id="input-from" class="input-costs-from" type="number" name="costs-from" value="0">
+                  <label class="costs-label costs-label-to" for="input-to">До</label>
+                  <input id="input-to" class="input-costs-to" type="number" name="costs-to" value="9000">
                 </div>
                 <input type="range" name="costs-range">
               </fieldset>
@@ -113,9 +109,9 @@
           <div class="hotels-controls-wrap">
             <h2>Найдено гостиниц: <span class="number-hotels">38</span></h2>
             <select class="select-control" aria-label="Сортировка">
-              <option class="select-control-option" value="cheap">Сначала дешевые</option>
-              <option class="select-control-option" value="popular">Сначала популярные</option>
-              <option class="select-control-option" value="expensive">Сначала дорогие</option>
+              <option value="cheap">Сначала дешевые</option>
+              <option value="popular">Сначала популярные</option>
+              <option value="expensive">Сначала дорогие</option>
             </select>
             <ul class="view-buttons-list">
               <li class="view-buttons-item">
