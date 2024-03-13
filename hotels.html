@@ -100,42 +100,77 @@
           </header>
           <section class="hotels-filter">
             <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-            <form action="#" class="hotels-filter-form" method="get">
+            <form action="https://echo.htmlacademy.ru/" class="hotels-filter-form" method="get">
               <fieldset class="filter-group filter-group-pool">
                 <legend class="control">Инфраструктура:</legend>
-                <label class="filter-label" for="hotels-pool">
-                  <input id="hotels-pool" class="control-input-checkbox" type="checkbox" name="hotels-pool"
-                    checked>Бассейн
+                <ul class="filter-list">
+                  <li class="filter-list-item">
+                    <label class="filter-label" for="hotels-pool">
+                  <input id="hotels-pool" class="control-input control-input-checkbox visually-hidden" type="checkbox" name="hotels-pool"
+                    checked>
+                    <span class="checkbox-custom"></span>
+                    <span class="control-label">Бассейн</span>
                 </label>
-                <label class="filter-label" for="hotels-parking">
-                  <input id="hotels-parking" class="control-input-checkbox" type="checkbox" name="hotels-parking"
-                    checked>Парковка
+                  </li>
+                  <li class="filter-list-item">
+                    <label class="filter-label" for="hotels-parking">
+                  <input id="hotels-parking" class="control-input control-input-checkbox visually-hidden" type="checkbox" name="hotels-parking"
+                    checked>
+                    <span class="checkbox-custom"></span>
+                    <span class="control-label">Парковка</span>
                 </label>
-                <label class="filter-label" for="wifi">
-                  <input id="wifi" class="control-input-checkbox" type="checkbox" name="hotels-wifi">Wi-Fi
+                  </li>
+                  <li class="filter-list-item">
+                    <label class="filter-label" for="wifi">
+                  <input id="wifi" class="control-input control-input-checkbox visually-hidden" type="checkbox" name="hotels-wifi">
+                  <span class="checkbox-custom"></span>
+                  <span class="control-label">Wi-Fi</span>
                 </label>
+                  </li>
+                </ul>
               </fieldset>
               <fieldset class="filter-group filter-group-housing">
                 <legend class="control">Тип Жилья:</legend>
-                <label class="filter-label">
-                  <input class="control-input-radio" type="radio" name="housing-type" checked>Гостиница
-                </label>
-                <label class="filter-label">
-                  <input class="control-input-radio" type="radio" name="housing-type">Мотель
-                </label>
-                <label class="filter-label">
-                  <input class="control-input-radio" type="radio" name="housing-type">Апартаменты
-                </label>
+                <ul class="filter-list">
+                  <li class="filter-list-item">
+                    <label class="filter-label">
+                      <input class="control-input control-input-radio visually-hidden" type="radio" name="housing-type" value="hotel" checked>
+                      <span class="radio-custom"></span>
+                      <span class="control-label">Гостиница</span>
+                    </label>
+                  </li>
+                  <li class="filter-list-item">
+                    <label class="filter-label">
+                      <input class="control-input control-input-radio visually-hidden" type="radio" name="housing-type" value="motel">
+                      <span class="radio-custom"></span>
+                      <span class="control-label">Мотель</span>
+                    </label>
+                  </li>
+                  <li class="filter-list-item">
+                    <label class="filter-label">
+                      <input class="control-input control-input-radio visually-hidden" type="radio" name="housing-type" value="apartment">
+                      <span class="radio-custom"></span>
+                      <span class="control-label">Апартаменты</span>
+                    </label>
+                  </li>
+                </ul>
               </fieldset>
               <fieldset class="filter-group filter-group-costs">
                 <legend class="control">Стоимость, ₽:</legend>
-                <div class="cost-wrap">
-                  <label class="costs-label costs-label-from" for="input-from">От</label>
+                <div class="range">
+                  <div class="range-wrapper-inputs">
+                  <label class="costs-label costs-label-from" for="input-from">от</label>
                   <input id="input-from" class="input-costs-from" type="number" name="costs-from" value="0">
-                  <label class="costs-label costs-label-to" for="input-to">До</label>
+                  <label class="costs-label costs-label-to" for="input-to">до</label>
                   <input id="input-to" class="input-costs-to" type="number" name="costs-to" value="9000">
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 206px;">
+                      <button class="range-toggle toggle-min" type="button"></button>
+                      <button class="range-toggle toggle-max" type="button"></button>
+                    </div>
+                  </div>
                 </div>
-                <input type="range" name="costs-range">
               </fieldset>
               <div class="filter-group-buttons">
                 <button class="button button-blue button-submit" type="submit">Применить</button>

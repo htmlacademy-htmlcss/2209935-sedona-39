@@ -905,9 +905,15 @@ body {
   display: flex;
 }
 
-.filter-group {
+.filter-list {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter-group {
   margin: 0;
   padding: 0;
   border: none;
@@ -935,36 +941,129 @@ body {
 
 .control {
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .filter-label {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  display: block;
 }
 
-.control-input-checkbox,
-.control-input-radio {
-  margin: 0;
-  padding: 0;
-  margin-right: 16px;
+.filter-label:has(.control-input:enabled):hover{
+  opacity: 0.6;
+}
+
+.filter-label:has(.control-input:enabled):active .checkbox-custom,
+.filter-label:has(.control-input:enabled):active .radio-custom{
+  outline: 3px solid #83b3d3;
+}
+
+.control-label {
+  padding-left: 36px;
+}
+
+.checkbox-custom {
+  position: absolute;
+  top: 2px;
   width: 20px;
   height: 20px;
-}
-
-.control-input-checkbox {
-  border: none;
-  border-radius: 4px;
   background-color: #ffffff;
+  border-radius: 4px;
 }
 
-.filter-label:not(:last-child) {
-  margin-bottom: 19px;
+.radio-custom{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
-.cost-wrap {
+.control-input:focus-visible + .checkbox-custom,
+.control-input:focus-visible + .radio-custom{
+  outline: 3px solid #83b3d3;
+}
+
+.control-input-checkbox:checked + .checkbox-custom::before{
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background-image: url("../images/filter-arrow.png");
+}
+
+.control-input-radio:checked + .radio-custom::before{
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+}
+
+.control-input:disabled ~ .control-label,
+.control-input:disabled + .checkbox-custom,
+.control-input:disabled + .radio-custom{
+  opacity: 0.3;
+}
+
+.control-input,
+.control-input{
+  margin: 0;
+  padding: 0;
+}
+
+.filter-list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.range-wrapper-inputs {
   display: flex;
   gap: 2px;
   position: relative;
+  margin-bottom: 46px;
+}
+
+.range-scale {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 4px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 206px;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83b3d3;
 }
 
 .input-costs-from,
@@ -974,7 +1073,6 @@ body {
   width: 143px;
   height: 48px;
   border: none;
-  margin-bottom: 36px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -982,6 +1080,14 @@ body {
   padding-left: 20px;
   background-color: #f2f2f2;
   transition: background-color 0.5s ease;
+}
+
+.input-costs-from::-webkit-outer-spin-button,
+.input-costs-from::-webkit-inner-spin-button,
+.input-costs-to::-webkit-inner-spin-button,
+.input-costs-to::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .input-costs-from:hover,
@@ -1011,7 +1117,7 @@ body {
 
 .costs-label-to {
   top: 12px;
-  right: 12px;
+  right: 20px;
 }
 
 .input-costs-from {
