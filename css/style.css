@@ -157,7 +157,7 @@ body {
   outline: none;
 }
 
-.button-favorite::after {
+.favorite-counter {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -171,7 +171,6 @@ body {
   line-height: 10px;
   width: 20px;
   height: 20px;
-  content: "12";
   background-color: #7db54f;
   border-radius: 50%;
 }
@@ -322,6 +321,7 @@ body {
 }
 
 .gallery-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -344,6 +344,21 @@ body {
   margin-bottom: 62px;
 }
 
+.gallery-item::before,
+.gallery-item-wrap::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 2px;
+  top: 198px;
+  left: 170px;
+}
+
+.gallery-item-wrap::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .gallery-item p {
   margin: 0;
   padding: 0;
@@ -362,6 +377,7 @@ body {
 }
 
 .gallery-item-picture {
+  position: relative;
   display: flex;
   width: 100%;
   background-color: #82b3d3;
@@ -949,12 +965,12 @@ body {
   display: block;
 }
 
-.filter-label:has(.control-input:enabled):hover{
+.filter-label:has(.control-input:enabled):hover {
   opacity: 0.6;
 }
 
 .filter-label:has(.control-input:enabled):active .checkbox-custom,
-.filter-label:has(.control-input:enabled):active .radio-custom{
+.filter-label:has(.control-input:enabled):active .radio-custom {
   outline: 3px solid #83b3d3;
 }
 
@@ -971,7 +987,7 @@ body {
   border-radius: 4px;
 }
 
-.radio-custom{
+.radio-custom {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -984,11 +1000,11 @@ body {
 }
 
 .control-input:focus-visible + .checkbox-custom,
-.control-input:focus-visible + .radio-custom{
+.control-input:focus-visible + .radio-custom {
   outline: 3px solid #83b3d3;
 }
 
-.control-input-checkbox:checked + .checkbox-custom::before{
+.control-input-checkbox:checked + .checkbox-custom::before {
   position: absolute;
   content: "";
   top: 6px;
@@ -998,7 +1014,7 @@ body {
   background-image: url("../images/filter-arrow.png");
 }
 
-.control-input-radio:checked + .radio-custom::before{
+.control-input-radio:checked + .radio-custom::before {
   position: absolute;
   content: "";
   width: 10px;
@@ -1009,12 +1025,12 @@ body {
 
 .control-input:disabled ~ .control-label,
 .control-input:disabled + .checkbox-custom,
-.control-input:disabled + .radio-custom{
+.control-input:disabled + .radio-custom {
   opacity: 0.3;
 }
 
 .control-input,
-.control-input{
+.control-input {
   margin: 0;
   padding: 0;
 }
@@ -1175,17 +1191,29 @@ body {
   margin-right: 200px;
 }
 
+.select {
+  position: relative; /* не понял, зачем... */
+  display: flex;
+  align-items: center;
+  width: 290px;
+  margin-right: auto;
+}
+
 .select-control {
-  width: 292px;
-  height: 50px;
-  margin-right: 70px;
+  width: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  transition: border-color 0.5s ease;
+  padding: 11px 131px 11px 20px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
 
 .select-control:hover {
@@ -1435,4 +1463,214 @@ body {
 
 .subscribe-hotels-subscription {
   color: #333333;
+}
+
+/* Модальное окно */
+
+.modal-container {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+/* Класс для скрытия окна поиска гостиницы */
+/* .modal-container-close{
+  display: none;
+} */
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-search {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-image: url("../images/modal/modal-close-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.modal-label {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+  text-transform: capitalize;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 23px;
+  align-items: center;
+}
+
+.input-date-wrap {
+  grid-column: 2 / -1;
+}
+
+.modal-input-age {
+  width: 110px;
+}
+
+.input-age-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.button-modal {
+  grid-column: 1 / -1;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: #83b3d3;
+  margin-top: 25px;
+  padding: 18px 256px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.modal-children-tooltip {
+  position: relative;
+}
+
+.tooltip-toggle {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: #83b3d3;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.tooltip-toggle::before,
+.tooltip-toggle::after {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  width: 2px;
+  left: 12px;
+}
+
+.tooltip-toggle::before {
+  height: 2px;
+  top: 7px;
+}
+
+.tooltip-toggle::after {
+  height: 9px;
+  top: 10px;
+}
+
+.tooltip-text {
+  position: absolute;
+  display: block;
+  width: 256px;
+  top: 40px;
+  left: -142px;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Класс для скрытия подсказки в модальном  окне */
+.tooltip-text-hide {
+  display: none;
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 50%;
+  top: -7px;
+  background-color: #333333;
+  transform: rotate(45deg);
+}
+
+.input-tooltip {
+  grid-column: 2 / -1;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.input-tooltip-error {
+  color: #ff5757;
+}
+
+.input-tooltip-succes {
+  color: #333333;
+}
+
+.input-date-wrap {
+  width: 440px;
+}
+
+.custom-calendar {
+  display: block;
+  width: 16px;
+  height: 15px;
+  background-color: #ffffff;
+  background-image: url("../images/modal/modal-calendar.svg");
+  background-size: 16px 15px;
+  background-repeat: no-repeat;
+  /* background-position: right 22px center; */
+}
+
+.modal-input-date {
+  width: 440px;
+  padding: 12px 20px;
 }
