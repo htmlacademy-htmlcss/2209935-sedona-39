@@ -77,7 +77,6 @@ body {
   display: block;
   position: absolute;
   margin-right: 28px;
-  outline: none;
 }
 
 .header-logo-link:hover .header-logo-svg path,
@@ -116,9 +115,7 @@ body {
   text-decoration: none;
   text-align: center;
   background-color: #fff;
-  outline: none;
   opacity: 0.3;
-  transition: color 0.5s ease;
 }
 
 .navigation-main-link[href] {
@@ -154,7 +151,6 @@ body {
   border: none;
   background-color: #ffffff;
   cursor: pointer;
-  outline: none;
 }
 
 .favorite-counter {
@@ -199,7 +195,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   box-sizing: border-box;
-  transition: background-color 0.5s ease;
 
   padding: 8px 26px;
   border-radius: 4px;
@@ -213,12 +208,16 @@ body {
 .favorite-svg,
 .search-svg {
   fill: #000000;
-  transition: fill 0.5s ease;
 }
 
 .button-search:not(:disabled):hover .search-svg,
 .button-favorite:not(:disabled):hover .favorite-svg {
   fill: #756257;
+}
+
+.button-search:not(:disabled):active .search-svg,
+.button-favorite:not(:disabled):active .favorite-svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .button-search:not(:disabled):focus-visible .search-svg,
@@ -321,7 +320,6 @@ body {
 }
 
 .gallery-item {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -341,21 +339,17 @@ body {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
-  margin-bottom: 62px;
+  margin-bottom: 30px;
 }
 
-.gallery-item::before,
-.gallery-item-wrap::before {
-  position: absolute;
-  content: "";
+.gallery-divider{
   background-color: rgba(0, 0, 0, 0.3);
   width: 60px;
   height: 2px;
-  top: 198px;
-  left: 170px;
+  margin-bottom: 30px;
 }
 
-.gallery-item-wrap::before {
+.gallery-divider-picture{
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -417,7 +411,7 @@ body {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 62px;
+  margin-bottom: 30px;
 }
 
 .gallery-item-wrap p {
@@ -567,7 +561,6 @@ body {
   max-width: 380px;
   margin-inline: auto;
   box-sizing: border-box;
-  transition: background-color 0.5s ease;
 }
 
 .appointment a[href] {
@@ -631,7 +624,6 @@ body {
   min-width: 684px;
   margin-inline: auto;
   justify-content: center;
-  align-items: center;
 }
 
 .input-subscribe {
@@ -640,14 +632,13 @@ body {
   font-weight: 400;
   line-height: 24px;
   width: 452px;
-  height: 52px;
+  min-height: 52px;
   border: none;
   margin: 0;
   padding-left: 20px;
   border-radius: 4px 0 0 4px;
   background-color: #f2f2f2;
   box-sizing: border-box;
-  transition: background-color 0.5s ease;
 }
 
 .input-subscribe:not(:disabled):hover {
@@ -667,9 +658,6 @@ body {
   padding: 8px 50px;
   background-color: transparent;
   cursor: pointer;
-  transition:
-    color 0.5s ease,
-    background-color 0.5s ease;
 }
 
 .hotels-more[href]:hover,
@@ -706,6 +694,8 @@ body {
   font-size: 20px;
   line-height: 36px;
   max-width: 300px;
+  max-height: 85px;
+  overflow: hidden;
 }
 
 .button-to-favorites {
@@ -738,7 +728,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  padding-top: 45px;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
 
@@ -767,7 +757,6 @@ body {
 
 .social-svg {
   fill: #83b3d3;
-  transition: fill 0.5s ease;
 }
 
 .social-link:hover .social-svg,
@@ -795,8 +784,7 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-  margin-inline: 1px;
-  transition: color 0.5s ease;
+  min-height: 52px;
 }
 
 .phone-link:hover,
@@ -814,7 +802,6 @@ body {
 
 .html-logo-svg {
   fill: #000000;
-  transition: fill 0.5s ease;
 }
 
 .academy-link:hover .html-logo-svg,
@@ -851,7 +838,7 @@ body {
   padding: 0;
   font-size: 60px;
   line-height: 78px;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .breadcrumbs-list {
@@ -862,18 +849,6 @@ body {
   padding: 0;
   list-style: none;
 }
-
-/* .breadcrumbs-link-home {
-  display: block;
-  min-width: 12px;
-  min-height: 12px;
-  box-sizing: border-box;
-  background-image: url("../images/hotels/breadcrumbs-home.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 5px;
-  margin-right: 23px;
-} */
 
 .breadcrumbs-link-home {
   fill: #ffffff;
@@ -975,6 +950,7 @@ body {
 }
 
 .control-label {
+  display: block;
   padding-left: 36px;
 }
 
@@ -1070,7 +1046,7 @@ body {
 
 .toggle-min {
   top: -8px;
-  left: 1px;
+  left: 0;
 }
 
 .toggle-max {
@@ -1094,8 +1070,8 @@ body {
   line-height: 24px;
   font-weight: 700;
   padding-left: 20px;
+  padding-right: 42px;
   background-color: #f2f2f2;
-  transition: background-color 0.5s ease;
 }
 
 .input-costs-from::-webkit-outer-spin-button,
@@ -1108,12 +1084,6 @@ body {
 
 .input-costs-from:hover,
 .input-costs-to:hover {
-  background-color: #e6e6e6;
-}
-
-.input-costs-from:focus-visible,
-.input-costs-to:focus-visible {
-  border: 3px solid #83b3d3;
   background-color: #e6e6e6;
 }
 
@@ -1160,7 +1130,7 @@ body {
 
 .button-reset:focus-visible {
   color: #ffffff;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .button-reset:active {
@@ -1275,7 +1245,6 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
-  transition: border-color 0.5s ease;
 }
 
 .view-button:hover,
@@ -1334,6 +1303,10 @@ body {
   object-fit: contain;
 }
 
+.hotel-image-link:hover img{
+  opacity: 0.6;
+}
+
 .hotels-item span,
 .hotel-costs {
   font-weight: 400;
@@ -1341,11 +1314,14 @@ body {
 
 .hotel-costs {
   justify-self: end;
+  margin-right: -1px;
+  margin-bottom: -1px;
 }
 
 .hotel-title {
   text-decoration: none;
   grid-column: 1 / -1;
+
 }
 
 .hotel-title h3 {
@@ -1354,9 +1330,22 @@ body {
   font-size: 24px;
   line-height: 24px;
   color: #000000;
+  margin-top: 3px;
 }
 
-.hotel-title:focus-visible {
+.hotel-title:hover h3{
+  color: #756157;
+}
+
+.hotel-title:active h3{
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.hotel-title:focus-visible h3{
+  color: #756157;
+}
+
+.hotel-title:focus-visible{
   outline: 2px solid #756157;
   border-radius: 4px;
 }
@@ -1427,7 +1416,6 @@ body {
   line-height: 36px;
   text-decoration: none;
   border-radius: 4px;
-  transition: background-color 0.5s ease;
 }
 
 .pagination-link:not(.pagination-more):not(.pagination-current):hover {
