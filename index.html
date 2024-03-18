@@ -214,44 +214,61 @@
     </div>
     <div class="modal-container modal-container-close">
       <div class="modal modal-search">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть окно поиска гостиницы</span>
         </button>
         <section class="modal-content">
           <h1 class="modal-title">Поиск гостиницы в Седоне</h1>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
-
             <span class="modal-label">Дата Заезда:</span>
-            <div class="input-date-wrap">
-              <label for="modal-date" class="input-label">
-                <input type="text" class="duble">
-                <input id="modal-date" type="date" class="modal-input modal-input-date visually-hidden">
-                <span class="custom-calendar"></span>
-              </label>
-            </div>
-
+            <label class="input-date-label">
+              <input aria-label="Укажите дату заезда в гостинницу" name="modal-input-date-in" type="text"
+                class="modal-input modal-input-date" maxlength="30" placeholder="Укажите дату" required>
+              <button class="button-calendar" type="button"></button>
+            </label>
             <span class="input-tooltip input-tooltip-error">Мы не можем отправить вас в прошлое</span>
-            <label for="modal-date" class="modal-label">Дата Выезда:</label>
-            <div class="input-date-wrap">
-              <input id="modal-date" type="date" class="modal-input modal-input-date">
-            </div>
+            <label class="modal-label">Дата Выезда:</label>
+            <label class="input-date-label">
+              <input aria-label="Укажите дату выезда из гостиницы" name="modal-input-date-out" type="text"
+                class="modal-input modal-input-date" maxlength="30" placeholder="Укажите дату" required>
+              <button class="button-calendar" type="button"></button>
+            </label>
             <span class="input-tooltip input-tooltip-succes">На эти даты есть свободные номера. Пока есть.</span>
-
-            <label for="modal-date" class="modal-label">Взрослые:</label>
-            <div class="input-age-wrap">
-              <input id="modal-date" type="number" class="modal-input modal-input-age">
-            </div>
-
-            <div class="input-age-wrap">
-              <label for="modal-date" class="modal-label">Дети:</label>
-            <span class="modal-children-tooltip">
-              <button class="tooltip-toggle" type="button"></button>
-              <span class="tooltip-text tooltip-text-hide">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-            </span>
-            </div>
-
-            <div class="input-age-wrap">
-              <input id="modal-date" type="number" class="modal-input modal-input-age">
+            <label class="modal-label">Взрослые:</label>
+            <div class="modal-wrap-age">
+              <div class="input-age-label">
+                <div class="button-wrap">
+                  <button aria-label="Убавить число взрослых" class="button-modal-input button-modal-minus"
+                    type="button"></button>
+                </div>
+                <input aria-label="Укажите число взрослых людей" type="number" class="modal-input modal-input-age"
+                  value="2" required>
+                <div class="button-wrap">
+                  <button aria-label="Прибавить число взрослых" class="button-modal-input button-modal-plus"
+                    type="button"></button>
+                </div>
+              </div>
+              <div class="children-wrap">
+                <div class="modal-tooltip-wrap">
+                  <label class="modal-label">Дети:</label>
+                  <span class="modal-children-tooltip">
+                    <button class="tooltip-toggle" type="button"></button>
+                    <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                      18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </div>
+                <div class="input-age-label">
+                  <div class="button-wrap">
+                    <button aria-label="Убавить число взрослых" class="button-modal-input button-modal-minus"
+                      type="button"></button>
+                  </div>
+                  <input aria-label="Укажите число детей" type="number" class="modal-input modal-input-age" value="2">
+                  <div class="button-wrap">
+                    <button aria-label="Прибавить число взрослых" class="button-modal-input button-modal-plus"
+                      type="button"></button>
+                  </div>
+                </div>
+              </div>
             </div>
             <button class="button-modal" type="submit">Найти</button>
           </form>
