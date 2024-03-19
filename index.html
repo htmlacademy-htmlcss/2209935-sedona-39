@@ -96,7 +96,6 @@
             <li class="gallery-item-picture">
               <div class="gallery-item-wrap">
                 <h3>Настоящий городок</h3>
-                <div class="gallery-divider gallery-divider-picture"></div>
                 <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <div class="gallery-item-picture-image">
@@ -105,17 +104,14 @@
             </li>
             <li class="gallery-item gallery-item-light">
               <h3>Небольшая площадь</h3>
-              <div class="gallery-divider"></div>
               <p>Все достопримечательности находятся очень близко</p>
             </li>
             <li class="gallery-item gallery-item-middle">
               <h3>Красивая дорога</h3>
-              <div class="gallery-divider"></div>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="gallery-item gallery-item-light">
               <h3>Мало туристов</h3>
-              <div class="gallery-divider"></div>
               <p>Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="gallery-item-picture">
@@ -124,7 +120,6 @@
               </div>
               <div class="gallery-item-wrap">
                 <h3>Там есть<br>мост дьявола</h3>
-                <div class="gallery-divider gallery-divider-picture"></div>
                 <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -210,7 +205,7 @@
         </section>
       </footer>
     </div>
-    <div class="modal-container modal-container-close"> <!-- Чтобы показать модальное окно записи, удалите класс modal-container-close-->
+    <div class="modal-container"> <!-- Чтобы показать модальное окно, добавить класс modal-container-show-->
       <div class="modal modal-search">
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть окно поиска гостиницы</span>
@@ -223,13 +218,15 @@
               <input class="modal-input modal-input-date" id="input-date-in" aria-label="Укажите дату заезда в гостинницу" name="modal-input-date-in" type="text" maxlength="30" placeholder="Укажите дату" required>
               <button class="button-calendar" type="button"></button>
             </div>
-            <span class="input-tooltip input-tooltip-error">Мы не можем отправить вас в прошлое</span> <!--Чтобы скрыть тултип для инпута, нужно добавить класс input-tooltip-hide-->
+            <!--Чтобы скрыть тултип для инпута, нужно добавить класс input-tooltip-hide, чтобы показать как доп информацию - класс input-tooltip-succes-->
+            <span class="input-tooltip input-tooltip-error">Мы не можем отправить вас в прошлое</span>
             <label class="modal-label" for="input-date-out" >Дата Выезда:</label>
             <div class="input-date-label">
               <input class="modal-input modal-input-date" id="input-date-out" aria-label="Укажите дату выезда из гостиницы" name="modal-input-date-out" type="text" maxlength="30" placeholder="Укажите дату" required>
               <button class="button-calendar" type="button"></button>
             </div>
-            <span class="input-tooltip input-tooltip-succes">На эти даты есть свободные номера. Пока есть.</span> <!--Чтобы скрыть тултип для инпута, нужно добавить класс input-tooltip-hide-->
+            <!--Чтобы скрыть тултип для инпута, нужно добавить класс input-tooltip-hide, чтобы показать как предупреждение - класс input-tooltip-error-->
+            <span class="input-tooltip input-tooltip-succes">На эти даты есть свободные номера. Пока есть.</span>
             <label class="modal-label" for="input-age-old" >Взрослые:</label>
             <div class="modal-wrap-age">
               <div class="input-age-label">
@@ -245,8 +242,10 @@
                 <div class="modal-tooltip-wrap">
                   <label class="modal-label" for="input-age-chldren" >Дети:</label>
                   <span class="modal-children-tooltip">
-                    <button class="tooltip-toggle" type="button"></button>
-                    <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span> <!--Чтобы скрыть тултип для этого span, нужно добавить класс tooltip-text-hide-->
+                    <button class="tooltip-toggle" type="button">
+                      <!-- Чтобы показать тултип, нужно добавить класс tooltip-text-show -->
+                      <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                    </button>
                   </span>
                 </div>
                 <div class="input-age-label">
