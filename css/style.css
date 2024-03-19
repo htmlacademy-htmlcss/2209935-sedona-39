@@ -171,17 +171,6 @@ body {
   border-radius: 50%;
 }
 
-/* Центрирование иконки (необязательно, так как в теге button?) */
-/* .search-svg,
-.favorite-svg{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-} */
-
 .want-here,
 .hotels-more {
   display: flex;
@@ -1078,8 +1067,13 @@ body {
 .input-costs-from::-webkit-inner-spin-button,
 .input-costs-to::-webkit-inner-spin-button,
 .input-costs-to::-webkit-outer-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
   margin: 0;
+}
+
+.input-costs-from,
+.input-costs-to{
+  -moz-appearance: textfield;
 }
 
 .input-costs-from:hover,
@@ -1760,8 +1754,9 @@ body {
   margin-bottom: 23px;
 }
 
+
+/* Класс для скрытия тултипа для инпутов с датами в модальном окне */
 .input-tooltip-hide {
-  /* Класс для скрытия тултипа для инпутов с датами в модальном окне */
   visibility: hidden;
 }
 

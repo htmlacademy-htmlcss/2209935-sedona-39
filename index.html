@@ -167,7 +167,7 @@
       </main>
       <footer class="page-footer container">
         <section class="socials">
-          <h2 class="visually-hidden" hidden>Список социальных сетей</h2>
+          <h2 class="visually-hidden">Список социальных сетей</h2>
           <ul class="social-list">
             <li>
               <a class="social-link" href="https://vk.com/htmlacademy">
@@ -203,11 +203,12 @@
           </ul>
         </section>
         <section class="phone">
-          <a href="tel:+78128121212" class="phone-link" aria-label="Номер телефона для связи">+7 (812) 812-12-12</a>
+          <h2 class="visually-hidden">Телефон для связи</h2>
+          <a href="tel:+78128121212" class="phone-link">+7 (812) 812-12-12</a>
         </section>
         <section class="academy-logo">
+        <h2 class="visually-hidden">Логотип HTML Academy</h2>
           <a href="https://htmlacademy.ru/" class="academy-link">
-            <span class="visually-hidden">Логотип HTML Academy</span>
             <svg class="html-logo-svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
               width="115" height="34">
               <path
@@ -217,7 +218,7 @@
         </section>
       </footer>
     </div>
-    <div class="modal-container modal-container-close">
+    <div class="modal-container modal-container-close"> <!-- Чтобы показать модальное окно записи, удалите класс modal-container-close-->
       <div class="modal modal-search">
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть окно поиска гостиницы</span>
@@ -231,14 +232,14 @@
                 class="modal-input modal-input-date" maxlength="30" placeholder="Укажите дату" required>
               <button class="button-calendar" type="button"></button>
             </label>
-            <span class="input-tooltip input-tooltip-error">Мы не можем отправить вас в прошлое</span>
+            <span class="input-tooltip input-tooltip-error">Мы не можем отправить вас в прошлое</span> <!--Чтобы скрыть тултип для инпута, нужно добавить класс input-tooltip-hide-->
             <label class="modal-label">Дата Выезда:</label>
             <label class="input-date-label">
               <input aria-label="Укажите дату выезда из гостиницы" name="modal-input-date-out" type="text"
                 class="modal-input modal-input-date" maxlength="30" placeholder="Укажите дату" required>
               <button class="button-calendar" type="button"></button>
             </label>
-            <span class="input-tooltip input-tooltip-succes">На эти даты есть свободные номера. Пока есть.</span>
+            <span class="input-tooltip input-tooltip-succes">На эти даты есть свободные номера. Пока есть.</span> <!--Чтобы скрыть тултип для инпута, нужно добавить класс input-tooltip-hide-->
             <label class="modal-label">Взрослые:</label>
             <div class="modal-wrap-age">
               <div class="input-age-label">
@@ -259,7 +260,7 @@
                   <span class="modal-children-tooltip">
                     <button class="tooltip-toggle" type="button"></button>
                     <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до
-                      18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                      18 лет. Дети до 6 лет размещаются бесплатно.</span> <!--Чтобы скрыть тултип для этого span, нужно добавить класс tooltip-text-hide-->
                   </span>
                 </div>
                 <div class="input-age-label">
