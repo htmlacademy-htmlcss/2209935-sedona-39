@@ -253,6 +253,7 @@ body {
 }
 
 .hero {
+  background-color: #9b9797;
   background-image: url("../images/backgrounds/welcome-background-divider.png"),
     url("../images/backgrounds/welcome-background.jpg");
   background-repeat: no-repeat;
@@ -260,7 +261,6 @@ body {
     0 100%,
     0 0;
   background-size: 100% auto;
-  background-color: #9b9797;
   margin-bottom: 69px;
   color: #ffffff;
 }
@@ -567,10 +567,11 @@ body {
 }
 
 .subscribe-index {
+  background-color: #b8aaaa;
   background-image: url("../images/backgrounds/subscribe-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #b8aaaa;
+  color: #ffffff;
 }
 
 .subscribe-index-subscription,
@@ -589,9 +590,13 @@ body {
 .subscribe-index,
 .subscribe-hotels {
   text-align: center;
-  background-color: #ffffff;
   padding-top: 96px;
   padding-bottom: 104px;
+}
+
+.subscribe-hotels{
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .subscribe-index h2,
@@ -811,6 +816,7 @@ body {
 
 .wrapper-background {
   color: #ffffff;
+  background-color: #847c7c;
   background-image: url("../images/backgrounds/hotels-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1156,7 +1162,7 @@ body {
 }
 
 .select {
-  position: relative; /* не понял, зачем... */
+  position: relative;
   display: flex;
   align-items: center;
   width: 294px;
@@ -1231,14 +1237,17 @@ body {
 }
 
 .view-button {
-  display: block;
   min-width: 48px;
   min-height: 48px;
+  margin: 0;
+  padding: 0;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 .view-button:hover,
