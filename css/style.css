@@ -361,12 +361,11 @@ body {
   font-weight: 400;
 }
 
-.gallery-item-picture-image {
-  margin-block: auto;
-}
-
 .gallery-item-picture-image img {
   display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .gallery-item-picture {
@@ -809,6 +808,11 @@ body {
   fill: #000000;
 }
 
+.academy-link{
+  display: block;
+  height: 100%;
+}
+
 .academy-link:hover .html-logo-svg,
 .academy-link:focus-visible .html-logo-svg {
   fill: #756157;
@@ -1091,6 +1095,7 @@ body {
 .input-costs-from,
 .input-costs-to{
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .input-costs-from:hover,
@@ -1648,7 +1653,9 @@ body {
   font-weight: inherit;
   font-size: inherit;
   line-height: 24px;
+  -moz-appearance: textfield;
 }
+
 
 .modal-input-age::-webkit-outer-spin-button,
 .modal-input-age::-webkit-inner-spin-button {
