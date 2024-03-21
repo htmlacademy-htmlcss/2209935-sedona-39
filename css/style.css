@@ -5,7 +5,6 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-
   src: url("../fonts/ptsans-400.woff2") format("woff2");
 }
 
@@ -14,7 +13,6 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-
   src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
@@ -34,6 +32,11 @@ body {
   line-height: 21px;
   color: #000000;
   background-color: #f2f2f2;
+}
+
+img{
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* Главная страница */
@@ -1004,13 +1007,13 @@ body {
   line-height: 23px;
 }
 
-.filter-label:has(.control-input:enabled):hover {
+.filter-label:has(.control-input:enabled):hover{
   opacity: 0.6;
 }
 
-.filter-label:has(.control-input:enabled):active .checkbox-custom,
-.filter-label:has(.control-input:enabled):active .radio-custom {
-  outline: 3px solid #83b3d3;
+.filter-label:has(.control-input:enabled):active,
+.filter-label:has(.control-input:enabled):active{
+  opacity: 0.3;
 }
 
 .control-label {
@@ -1382,7 +1385,6 @@ body {
 
 .hotel-image-link img {
   display: block;
-  object-fit: contain;
 }
 
 .hotel-image-link:hover img {
@@ -1590,23 +1592,23 @@ body {
 .modal-close-button::before {
   position: absolute;
   content: "";
-  width: 14px;
+  width: 18px;
   height: 2px;
   background-color: #000000;
   top: 50%;
   left: 50%;
-  transform: translateX(-6px) rotate(45deg);
+  transform: translateX(-8px) rotate(45deg);
 }
 
 .modal-close-button::after {
   position: absolute;
   content: "";
   width: 2px;
-  height: 14px;
+  height: 18px;
   background-color: #000000;
   top: 50%;
   left: 50%;
-  transform: translateY(-6px) rotate(45deg);
+  transform: translateY(-8px) rotate(45deg);
 }
 
 .modal-close-button:hover {
@@ -1677,17 +1679,22 @@ body {
 
 .button-calendar {
   position: absolute;
-  width: 16px;
-  height: 15px;
+  width: 21px;
+  height: 20px;
   background-image: url("../images/modal/modal-calendar.svg");
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
   border: none;
   padding: 0;
-  top: 16px;
-  right: 22px;
+  top: 15px;
+  right: 21px;
   cursor: pointer;
+}
+
+.button-calendar:hover,
+.button-calendar:focus-visible{
+  opacity: 1;
 }
 
 .modal-input {
@@ -1854,6 +1861,10 @@ body {
   display: block;
 }
 
+.tooltip-toogle:active .tooltip-text{
+  display: block;
+}
+
 .tooltip-text::before {
   content: "";
   position: absolute;
@@ -1947,6 +1958,15 @@ body {
 .button-modal-plus:active::before,
 .button-modal-plus:active::after {
   background-color: rgba(117, 97, 87, 0.3);
+}
+
+.button-modal-minus:focus-visible::before {
+  background-color: #000000;
+}
+
+.button-modal-plus:focus-visible::before,
+.button-modal-plus:focus-visible::after {
+  background-color: #000000;
 }
 
 .modal-wrap-age {
