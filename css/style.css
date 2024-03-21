@@ -132,7 +132,7 @@ img{
   position: absolute;
   left: 16px;
   right: 13px;
-  bottom: -1px;
+  bottom: 0;
   content: "";
   height: 2px;
   background-color: #756257;
@@ -276,7 +276,6 @@ img{
     0 100%,
     0 0;
   background-size: 100% auto;
-  margin-bottom: 69px;
   color: #ffffff;
 }
 
@@ -311,8 +310,8 @@ img{
 }
 
 .gallery {
+  padding-top: 69px;
   text-align: center;
-  margin-bottom: 64px;
 }
 
 .gallery-list {
@@ -458,8 +457,8 @@ img{
 }
 
 .advantages {
+  padding-top: 64px;
   text-align: center;
-  margin-bottom: 96px;
 }
 
 .advantages-list {
@@ -532,6 +531,7 @@ img{
 }
 
 .appointment {
+  padding-top: 96px;
   text-align: center;
   margin-bottom: 96px;
 }
@@ -593,7 +593,7 @@ img{
 
 .subscribe-index {
   background-color: #b8aaaa;
-  background-image: url("../images/backgrounds/subscribe-background.jpg");
+  background-image: url("../images/backgrounds/subscribe-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
