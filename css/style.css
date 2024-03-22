@@ -436,7 +436,6 @@ img {
 
 .advantages h2 {
   padding: 0;
-  margin: 0;
   font-size: 30px;
   line-height: 36px;
   margin: 0 auto;
@@ -753,11 +752,6 @@ img {
   padding-bottom: 30px;
 }
 
-.socials {
-  width: 200px;
-  margin-right: 178px;
-}
-
 .social-list {
   display: flex;
   flex-wrap: wrap;
@@ -766,6 +760,8 @@ img {
   padding: 0;
   list-style: none;
   max-width: 200px;
+  width: 200px;
+  margin-right: 178px;
 }
 
 .social-link {
@@ -789,11 +785,6 @@ img {
   fill: rgba(104, 162, 202, 0.3);
 }
 
-.phone {
-  width: 335px;
-  margin-right: 235px;
-}
-
 .phone-link {
   display: flex;
   align-items: center;
@@ -806,6 +797,8 @@ img {
   margin: 0;
   padding: 0;
   min-height: 52px;
+  width: 335px;
+  margin-right: 235px;
 }
 
 .phone-link:hover,
@@ -817,10 +810,6 @@ img {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.academy-logo {
-  width: 115px;
-}
-
 .html-logo-svg {
   fill: #000000;
 }
@@ -828,6 +817,7 @@ img {
 .academy-link {
   display: block;
   height: 100%;
+  width: 115px;
 }
 
 .academy-link:hover .html-logo-svg,
@@ -1189,17 +1179,7 @@ img {
   margin-right: auto;
 }
 
-.select {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 294px;
-  margin-right: 70px;
-  margin-left: 10px;
-}
-
 .select-control {
-  width: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -1215,6 +1195,9 @@ img {
   background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
+  width: 294px;
+  margin-right: 70px;
+  margin-left: 10px;
 }
 
 .select-control:hover {
