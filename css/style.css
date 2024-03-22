@@ -492,6 +492,7 @@ img{
   margin: 0;
   padding: 0;
   font-weight: 400;
+  color: #333333;
 }
 
 .advantages-item-dark {
@@ -593,7 +594,7 @@ img{
 
 .subscribe-index {
   background-color: #b8aaaa;
-  background-image: url("../images/backgrounds/subscribe-background.png");
+  background-image: url("../images/backgrounds/subscribe-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
@@ -1209,7 +1210,8 @@ img{
   padding-right: 48px;
   box-sizing: border-box;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
+  background-color: #ffffff;
   background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
